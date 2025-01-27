@@ -1,0 +1,76 @@
+###
+<<<<<<< Updated upstream
+POST http://localhost:3443/api/player
+=======
+POST http://localhost:3001/api/player
+>>>>>>> Stashed changes
+Content-Type: application/json
+
+{
+    "name": "Monster",
+    "gameId": "1"
+}
+
+###
+POST http://localhost:3443/api/team
+Content-Type: application/json
+
+{
+    "name": "Monster 1",
+    "playersID": ["672b7cadb77b8ccc52dfd2ea"]
+}
+
+
+###
+<<<<<<< Updated upstream
+<<<<<<< HEAD
+=======
+GET http://localhost:3443/api/player/6724c6ea6be7c5caaf71ee0f
+
+###
+>>>>>>> 66736265166c6758ab42ea732e56bcb66ff636f3
+GET http://localhost:3443/api/player/672b4c851d3e7a031591033a
+
+###
+DELETE http://localhost:3443/api/player/672b4d907d6f66c30af778df
+=======
+PUT http://localhost:3443/api/team/672c75d4ce1ea8d4ab8b5843
+Content-Type: application/json
+
+{
+    
+    "players": ["672c73a70328e3e3bcdb2cd4"]
+}
+###
+GET http://localhost:3000/api/player/6729f2ca9db37bc41107ebf4
+
+
+###
+POST http://localhost:3443/api/team
+Content-Type: application/json
+
+{
+    "name": "Monster 1",
+    "playersID": ["672b7cadb77b8ccc52dfd2ea"]
+}
+
+###
+POST http://localhost:3443/api/team
+Content-Type: application/json
+
+{
+    "name": "Monster 1",
+    "playersID": ["672b7cadb77b8ccc52dfd2ea"],
+    "codeInvite": "0G2W26",
+    "hostId":"672b7cadb77b8ccc52dfd2ea",
+   
+
+}
+
+###
+DELETE http://localhost:3443/api/team/672dfb9858b6ea1d3d7826c5
+
+
+###
+GET http://localhost:3443/api/team/6730add2ca48e82fdf3c851e
+>>>>>>> Stashed changes

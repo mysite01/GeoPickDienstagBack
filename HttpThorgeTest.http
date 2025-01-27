@@ -1,0 +1,39 @@
+###
+POST http://localhost:3443/api/login
+Content-Type: application/json
+
+{
+  "name": "JohnDoe",
+  "password": "securePassword13"
+}
+
+###
+DELETE http://localhost:3443/api/login
+
+POST http://localhost:3443/api/game
+{
+  "title": "TestMap",
+  "beschreibung": "TestBeschreibung",
+  "POIs": {
+    "type": ""
+  }
+}
+
+###
+GET http://localhost:3443/api/game/pois/6744758981c0e0aa072c5f3a
+
+###
+GET http://localhost:3443/api/poi/6744758981c0e0aa072c5f38
+
+
+###
+
+POST http://localhost:3443/api/poi/claim/6753143deca1fd6536d307cd
+
+
+###
+GET http://127.0.0.1:3443/api/poi
+
+###
+
+GET http://localhost:3443/api/team/team/67543721d6e1c73493d013d7

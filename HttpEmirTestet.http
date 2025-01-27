@@ -1,0 +1,27 @@
+###
+POST http://localhost:3443/api/user
+Content-Type: application/json
+
+{
+  "name": "Emir",
+  "password": "Password123",
+  "email": "EmirKaya19@outlook.de"
+}
+
+###
+POST http://localhost:3443/api/login
+Content-Type: application/json
+
+{
+  "name": "Emir",
+  "password": "Password123"
+}
+
+###
+POST http://localhost:3443/api/user/verify-email
+Content-Type: application/json
+
+{
+  "token": "82e400663b702b4cb0384abe5ca90e54f2a0977a41e4b62be0995f166910e4c2"
+}
+
