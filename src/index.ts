@@ -13,6 +13,49 @@ import { WebSocketServer, WebSocket } from 'ws';
 
 
 
+
+
+
+
+
+
+
+import express from 'express';
+import cors from 'cors';
+
+
+
+
+
+const corsOptions = {
+  origin: 'https://geo-pick-front.vercel.app', // Ersetze dies mit deiner tatsächlichen Frontend-Domain
+  methods: 'GET,POST,PUT,DELETE',
+  allowedHeaders: 'Content-Type, Authorization', // Erlaubte Header
+  credentials: true, // Falls du Cookies oder Authentifizierung benötigst
+};
+
+
+
+
+app.use(cors(corsOptions));
+
+
+// Reagiere auf Preflight-Anfragen (OPTIONEN-Methoden)
+app.options('*', cors(corsOptions));
+
+
+app.post('*', (req, res, next) => {
+  console.log(`POST request from: ${req.get('Origin') || req.ip}`);
+  next(); // Weiter mit der nächsten Middleware oder Route
+});
+
+
+
+
+
+
+
+
 async function createExampleGame() {
     const berlinPoi1: POIResource = { name: "Alexanderplatz", lat: 52.520008, long: 13.404954, beschreibung: "Ein belebter Platz mit Fernsehturm, Geschäften und urbanem Flair.", punkte: 100}
     const berlinPoi2: POIResource = { name: "Brandenburger Tor", lat: 52.516275, long: 13.377704, beschreibung: "Ein ikonisches Monument und Symbol für Geschichte und Einheit.", punkte: 200}
